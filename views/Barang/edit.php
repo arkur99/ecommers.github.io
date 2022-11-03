@@ -1,12 +1,4 @@
- <?php 
-foreach ($data['barang'] as $kodebarang) {
-    $kodebarang=$kodebarang['kodebarang'];
-    $urutan=(int) substr($kodebarang,3,3);
-    $urutan++;
-    $huruf="235";
-    $kodebarang=$huruf . sprintf("%03s", $urutan);
-}
-  ?>
+
  <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="x_panel">
@@ -28,35 +20,31 @@ foreach ($data['barang'] as $kodebarang) {
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-        <form class="" method="post" action="<?php echo $base_url?>/barang/save" enctype="multipart/form-data">
+        <?php foreach ($data['barang'] as $barang) { ?>
+        <form class="" method="post" action="<?php echo $base_url.'/barang/update/'. $barang['idbarang'] ?>" enctype="multipart/form-data">
         <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">Id Barang<span class="required">*</span></label>
+        <label class="col-form-label col-md-3 col-sm-3  label-align">Nama barang<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input class="form-control" type="text" name="idbarang" value="<?= $kodebarang ?>" >
-        </div>
-        </div>
-        <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">Nama Barang<span class="required">*</span></label>
-        <div class="col-md-6 col-sm-6">
-        <input class="form-control" type="text" name="namabarang" required >
+        <input class="form-control" type="text" name="namabarang" value="<?= $barang['namabarang'] ?>" >
         </div>
         </div>
         <div class="field item form-group">
         <label class="col-form-label col-md-3 col-sm-3  label-align">Harga Barang<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input type="text" name="harga" class="form-control" required="">
+        <input class="form-control" type="text" name="harga" value="<?= $barang['harga'] ?>"  >
         </div>
         </div>
         <div class="field item form-group">
         <label class="col-form-label col-md-3 col-sm-3  label-align">Stok Barang<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input type="text" name="stok" class="form-control" required="" >
+        <input class="form-control" type="text" name="stok" value="<?= $barang['stok'] ?>"  >
         </div>
         </div>
         <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">Foto Barang<span class="required">*</span></label>
+        <label class="col-form-label col-md-3 col-sm-3  label-align">Gambar Barang<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input type="file" name="foto" class="form-control" required="" >
+        <img src="<?= $base_url."/assets/img/".$barang['foto']?>" width="70" height="70">
+        <input class="form-control" type="file" name="foto">
         </div>
         </div>
         <div class="field item form-group">
@@ -64,6 +52,7 @@ foreach ($data['barang'] as $kodebarang) {
 
         <div class="col-md-6 col-sm-6">
         <select name="id_distributor" class="form-control">
+        <option value="<?= $barang['id_distributor'] ?>"><?= $barang['nama_dist']  ?></option>
         <option>Pilih</option>
         <?php foreach ($data['distributor'] as $distributor): ?>
         <option value="<?= $distributor['id_distributor'] ?>"><?= $distributor['nama_dist']?></option>
@@ -71,16 +60,17 @@ foreach ($data['barang'] as $kodebarang) {
         </select>
         </div>
         </div>
-        <div class="ln_solid">
-        <div class="form-group">
-        <div class="col-md-6 offset-md-3">
-        <button type='submit' class="btn btn-primary">Submit</button>
-        <button type='reset' class="btn btn-success">Reset</button>
-        </div>
-        </div>
-         </div>
-        </form>
-        </div>
-        </div>
-        </div>
-        </div>
+      <div class="ln_solid">
+      <div class="form-group">
+      <div class="col-md-6 offset-md-3">
+      <button type='submit' class="btn btn-primary">Submit</button>
+      <button type='reset' class="btn btn-success">Reset</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

@@ -19,35 +19,31 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-        <form class="" method="post" action="<?php echo $base_url?>/distributor/save">
+        <?php foreach ($data['petugas'] as $petugas) { ?>
+        <form class="" method="post" action="<?php echo $base_url.'/petugas/update/'. $petugas['idpetugas'] ?>">
         <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">Nama Distributor<span class="required">*</span></label>
+        <label class="col-form-label col-md-3 col-sm-3  label-align">Nama Petugas<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input class="form-control" type="text" name="nama_dist" required >
-        </div>
-        </div>
-        <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">Alamat Distributor<span class="required">*</span></label>
-        <div class="col-md-6 col-sm-6">
-        <textarea required class="form-control" name="alamat"></textarea>
+        <input class="form-control" type="text" name="nama_petugas" value="<?= $petugas['nama_petugas'] ?>" >
         </div>
         </div>
         <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">No Telp Distributor<span class="required">*</span></label>
+        <label class="col-form-label col-md-3 col-sm-3  label-align">Jabatan<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input class="form-control" type="text" name="nohp" required >
+        <textarea class="form-control" name="jabatan"><?= $petugas['jabatan'] ?></textarea>
         </div>
         </div>
-        <div class="ln_solid">
-        <div class="form-group">
-        <div class="col-md-6 offset-md-3">
-        <button type='submit' class="btn btn-primary">Submit</button>
-        <button type='reset' class="btn btn-success">Reset</button>
-        </div>
-        </div>
-         </div>
-        </form>
-        </div>
-        </div>
-        </div>
-        </div>
+      <div class="ln_solid">
+      <div class="form-group">
+      <div class="col-md-6 offset-md-3">
+      <button type='submit' class="btn btn-primary">Submit</button>
+      <button type='reset' class="btn btn-success">Reset</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

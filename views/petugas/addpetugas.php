@@ -19,23 +19,17 @@
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
-        <form class="" method="post" action="<?php echo $base_url?>/distributor/save">
+        <form class="" method="post" action="<?php echo $base_url?>/petugas/save">
         <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">Nama Distributor<span class="required">*</span></label>
+        <label class="col-form-label col-md-3 col-sm-3  label-align">Nama Petugas<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input class="form-control" type="text" name="nama_dist" required >
-        </div>
-        </div>
-        <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">Alamat Distributor<span class="required">*</span></label>
-        <div class="col-md-6 col-sm-6">
-        <textarea required class="form-control" name="alamat"></textarea>
+        <input class="form-control" type="text" name="nama_petugas" required >
         </div>
         </div>
         <div class="field item form-group">
-        <label class="col-form-label col-md-3 col-sm-3  label-align">No Telp Distributor<span class="required">*</span></label>
+        <label class="col-form-label col-md-3 col-sm-3  label-align">Jabatan<span class="required">*</span></label>
         <div class="col-md-6 col-sm-6">
-        <input class="form-control" type="text" name="nohp" required >
+        <textarea required class="form-control" name="jabatan"></textarea>
         </div>
         </div>
         <div class="ln_solid">

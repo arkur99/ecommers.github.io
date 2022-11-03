@@ -7,7 +7,7 @@ class Helpers
 {
 	
 	function base_url() {
-		return $base_url = 'http://localhost/ecommers/';
+		return $base_url = 'http://localhost/penjualan1';
 	}
 
 	function template($view, $data = '') {
@@ -29,7 +29,7 @@ class Helpers
 	function isloggedin() {
 		$base_url = $this->base_url();
 
-		if(! isset($_SESSION['userid'])) {
+		if(! isset($_SESSION['id'])) {
 			header('location: '.$base_url.'/login');
 			return false;
 		}
