@@ -1,36 +1,45 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+<div class="navview-content h-100">
+        <div data-role="appbar" class="pos-absolute bg-darkCyan fg-white">
+
+            <a href="#" class="app-bar-item d-block d-none-lg" id="paneToggle"><span class="mif-menu"></span></a>
+
+            <div class="app-bar-container ml-auto">
+                <a href="#" class="app-bar-item">
+                    <span class="mif-envelop"></span>
+                    <span class="badge bg-green fg-white mt-2 mr-1">4</span>
+                </a>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-bell"></span>
+                    <span class="badge bg-orange fg-white mt-2 mr-1">10</span>
+                </a>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-flag"></span>
+                    <span class="badge bg-red fg-white mt-2 mr-1">9</span>
+                </a>
+                <div class="app-bar-container">
+                    <a href="#" class="app-bar-item">
+                        <img src="images/jek_vorobey.jpg" class="avatar">
+                        <span class="ml-2 app-bar-name">Jack Sparrow</span>
+                    </a>
+                    <div class="user-block shadow-1" data-role="collapse" data-collapsed="true">
+                        <div class="bg-darkCyan fg-white p-2 text-center">
+                            <img src="images/jek_vorobey.jpg" class="avatar">
+                            <div class="h4 mb-0">Jack Sparrow</div>
+                            <div>Pirate captain</div>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2">
+                            <button class="button flat-button">Followers</button>
+                            <button class="button flat-button">Sales</button>
+                            <button class="button flat-button">Friends</button>
+                        </div>
+                        <div class="bg-white d-flex flex-justify-between flex-equal-items p-2 bg-light">
+                            <button class="button mr-1">Profile</button>
+                            <button class="button ml-1">Sign out</button>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="app-bar-item">
+                    <span class="mif-cogs"></span>
+                </a>
+            </div>
+        </div>

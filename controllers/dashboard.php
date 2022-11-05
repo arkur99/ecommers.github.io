@@ -1,7 +1,6 @@
 <?php 
 if($aksi =='index'){
-    $helpers->template('dashboard.php');
-    
-}
-
+        $helpers->template('dashboard.php');
+        
+    }
  ?>

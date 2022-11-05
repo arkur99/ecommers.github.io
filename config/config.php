@@ -4,7 +4,7 @@ require('database.php');
 
 $uri        = explode('/', $_SERVER['REQUEST_URI']);
 
-$base_url = "http://localhost/ecommers/";
+$base_url = "http://localhost:8080/ecommers/";
 
 $default_controller = 'dashboard';
 $controller         = ($uri[2]) ? $uri[2] : $default_controller;
